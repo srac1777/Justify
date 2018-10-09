@@ -20,7 +20,7 @@ class Api::PurchasesController < ApplicationController
     end
 
     def index
-        @purchases = Purchase.all
+        @purchases = Purchase.all.where(["user_id = ?", current_user.id])
     end
 
     def show
