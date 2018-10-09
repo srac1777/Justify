@@ -12,7 +12,7 @@ export const fetchPurchase = id => {
     });
 };
 
-export const createPlaylist = purchase => {
+export const createPurchase = purchase => {
     // console.log(purchase);
 
     return $.ajax({

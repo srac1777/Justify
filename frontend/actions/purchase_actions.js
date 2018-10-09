@@ -4,9 +4,13 @@ export const RECEIVE_ALL_PURCHASES = 'RECEIVE_ALL_PURCHASES';
 export const RECEIVE_PURCHASE = 'RECEIVE_PURCHASE';
 export const REMOVE_PURCHASE = 'REMOVE_PURCHASE';
 
-export const fetchPurchases = () => dispatch => (
-    PurchasesUtil.fetchPurchases().then(purchases => dispatch({ type: RECEIVE_ALL_PURCHASES, purchases }))
-);
+export const fetchPurchases = () => dispatch => {
+    // debugger;
+    return PurchasesUtil.fetchPurchases().then(purchases => {
+        // debugger
+        return dispatch({ type: RECEIVE_ALL_PURCHASES, purchases })
+    })
+};
 
 export const fetchPurchase = id => dispatch => {
 

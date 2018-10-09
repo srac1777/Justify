@@ -1,15 +1,13 @@
 import React from 'react';
-import { Route, Link, Switch, NavLink } from 'react-router-dom';
-import LandingPage from './landing_page/landing_page';
-
+import { Switch } from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
-import LogoutContainer from './session_form/logout_container';
-// import UserContainer from './temp/user_container';
 
-import { logout } from '../actions/session_actions';
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import LandingPage from './landing_page/landing_page';
 import HomePage from './home_page/home';
+import PurchaseShowPage from '../components/purchases/purchases_show_container';
+
 
 
 
@@ -21,6 +19,8 @@ const App = ({store}) => {
                         <AuthRoute path="/login" component={LogInFormContainer} />
                         <AuthRoute path="/signup" component={SignUpFormContainer} />
                         <ProtectedRoute path="/home" component={HomePage} />
+                        {/* <ProtectedRoute exact path="/purchases/new" component={NewPurchasePage} /> */}
+                        <ProtectedRoute exact path="/purchases/:purchaseId" component={PurchaseShowPage} />
                         
                         <AuthRoute path="/" component={LandingPage} />
                     </Switch>
