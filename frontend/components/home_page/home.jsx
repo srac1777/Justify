@@ -6,7 +6,7 @@ import PurchasesIndexContainer from '../purchases/purchases_index_container';
 class HomePage extends React.Component {
     render() {
         return (
-            <div>
+            <div className="homepage-full">
                 <LogoutContainer />
                 <UserContainer />
                 You are logged in!
