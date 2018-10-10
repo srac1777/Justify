@@ -11,6 +11,11 @@ class PurchaseShow extends React.Component {
         this.props.fetchPurchase(this.props.match.params.purchaseId);
     }
 
+    handleDelete(e) {
+        e.preventDefault();
+        this.props.deletePurchase(this.props.match.params.purchaseId).then(this.props.history.push('/home'));
+    }
+
     render() {
         if (!this.props.purchase) {
             return (<div>Loading...</div>);
@@ -22,6 +27,8 @@ class PurchaseShow extends React.Component {
                 {this.props.purchase.name}
                 {this.props.purchase.cost}
                 {this.props.purchase.description}
+                <button onClick={this.handleDelete.bind(this)}>Delete purchase</button>
+                <Link to='/home'>Home</Link>
             </div>
         );
     }

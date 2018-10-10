@@ -1,12 +1,13 @@
 class Api::PurchasesController < ApplicationController
     def create
        @purchase = Purchase.new(purchases_params)
-       
-       if @purchase.save
-            render :show
-       else
-            render json: @purchase.errors.full_messages, status: 422
-       end
+
+            if @purchase.save
+                render :show
+            else
+                render json: @purchase.errors.full_messages, status: 422
+            end
+    
     end
 
     def update
