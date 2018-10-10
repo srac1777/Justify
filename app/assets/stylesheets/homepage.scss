@@ -1,5 +1,9 @@
+.AppComponent {
+    overflow: scroll;
+
+}
 .homepage-full {
-    background: red;
+    // background: red;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -7,8 +11,9 @@
 }
 
 .title-top {
+    margin-top: 55px;
     width: 100%;
-    background: green;
+    // background: green;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -36,7 +41,13 @@
 }
 
 .user-container {
-    background: orange;
+    // background: orange;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: -2px 23px 48px -28px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px 23px 48px -28px rgba(0,0,0,0.75);
+box-shadow: -2px 23px 48px -28px rgba(0,0,0,0.75);
+
 
 }
 

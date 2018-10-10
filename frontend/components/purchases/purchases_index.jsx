@@ -22,17 +22,22 @@ class PurchasesIndex extends React.Component {
         if(this.props.purchases === {}){
              to_return = <div>Loading...</div>
         } else {
-            to_return = (<div>
-                {this.props.purchases.map((purchase,i) => (<PurchasesIndexItem key={i} purchase={purchase} />))}
+            let len = this.props.purchases.length;
+            to_return = (<div className="purchase-box-container">
+                {   
+                    this.props.purchases.map(
+                    function (purchase,i,len) {
+                        if(i !== len.length - 1) return (<PurchasesIndexItem key={i} purchase={purchase} />)
+                })}
             </div>)
         }
         
         return (
             <div className="purchases-index">
                 <div className="total-amt-text">
-                    <div>Your total Amortized Cost for all your purchases is</div>
+                    <div>Your total Amortized Cost for all your purchases is:</div>
                     <div className="total-number">
-                        {Math.round(this.state.total_value*100) / 100}
+                        $ {Math.round(this.state.total_value*100) / 100}
                     </div>
                 </div>
 

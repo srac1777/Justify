@@ -25,8 +25,11 @@ class Api::PurchasesController < ApplicationController
     def index
         @purchases = current_user.purchases
         @total_value = 0
+        @values = []
         @purchases.each do |purchase|
-            @total_value += calculate_value(purchase)
+            calculated_value = calculate_value(purchase)
+            @values << calculated_value
+            @total_value += calculated_value
         end
 
     end
@@ -42,7 +45,7 @@ class Api::PurchasesController < ApplicationController
     end
 
     def destroy
-        @purchase = Purchase.find(params[:id]).where(["user_id = ?", current_user.id])
+        @purchase = Purchase.find(params[:id])
         @purchase.destroy
         render :show
     end

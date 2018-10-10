@@ -7,11 +7,19 @@ class PurchasesIndexItem extends React.Component {
     }
 
     render() {
+        let purchase_val = Math.round(this.props.purchase.value * 100) / 100;
+        var s = purchase_val.toString();
+        if (s.indexOf('.') == -1) s += '.';
+        while (s.length < s.indexOf('.') + 3) s += '0';
+
         return (
             <div>
-                <li>
-                    <Link to={`/purchases/${this.props.purchase.id}`}><p>{this.props.purchase.name}</p></Link>
-                </li>
+                <Link to={`/purchases/${this.props.purchase.id}`}>
+                    <div className="each-purchase-box">
+                        <div className="purchase-name-top-index-item">{this.props.purchase.name}</div>
+                        <div>Current Cost: {s}</div>
+                    </div>
+                </Link>
             </div>
         );
     }

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PurchaseShow from './purchase_show';
-import { fetchPurchase, deletePurchase } from '../../actions/purchase_actions';
+import { fetchPurchase, fetchPurchases, deletePurchase } from '../../actions/purchase_actions';
 
 const msp = (state, ownProps) => {
     return {

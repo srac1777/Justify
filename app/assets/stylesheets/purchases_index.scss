@@ -1,7 +1,7 @@
 .purchases-index-container {
-    background: blueviolet;
+    // background: blueviolet;
     height: 100%;
-    overflow: scroll;
+    // overflow: scroll;
 }
 
 .purchases-index {
@@ -12,7 +12,7 @@
 }
 
 .create-new-btn-container {
-    background: yellow;
+    // background: yellow;
     
 }
 
@@ -44,14 +44,38 @@
 
 .total-number {
     font-size: 52px;
-    background: blue;
+    // background: blue;
 }
 
 .purchases-index-stuff {
-    background: palevioletred;
+    // background: palevioletred;
     width: 100%;
 }
 
 .your-purchases-text {
+    margin-left: 20px;
     font-size: 32px;
+}
+
+.purchase-box-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // background: saddlebrown;
+}
+
+.each-purchase-box {
+    // padding-top: 50px;
+    margin: 30px;
+    overflow: hidden;
+    height: 150px;
+    width: 200px;
+    background: yellowgreen;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.purchase-name-top-index-item {
+    margin-top: 30px; 
+    font-size: 18px;
 }

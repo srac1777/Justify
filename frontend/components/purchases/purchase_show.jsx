@@ -13,7 +13,9 @@ class PurchaseShow extends React.Component {
 
     handleDelete(e) {
         e.preventDefault();
-        this.props.deletePurchase(this.props.match.params.purchaseId).then(this.props.history.push('/home'));
+        this.props.deletePurchase(this.props.match.params.purchaseId)
+        .then(this.props.fetchPurchases())
+        .then(this.props.history.push('/home'));
     }
 
     render() {
