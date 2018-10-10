@@ -1,16 +1,19 @@
 import React from 'react';
 import PurchasesIndexItem from './purchases_index_item';
 // import PurchasesFormContainer from './purchases_form_container';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class PurchasesIndex extends React.Component {
 
     constructor(props){
         super(props);
+        this.state={total_value: ''}
     }
 
     componentWillMount() {
-        this.props.fetchPurchases()
+        this.props.fetchPurchases().then(pur => {
+            this.setState({total_value: pur.purchases.total_value})
+        })
     }
 
     render() {
@@ -20,18 +23,27 @@ class PurchasesIndex extends React.Component {
              to_return = <div>Loading...</div>
         } else {
             to_return = (<div>
-                <ul>
-                    {this.props.purchases.map(purchase => (<PurchasesIndexItem key={purchase.id} purchase={purchase} />))}
-                </ul>
+                {this.props.purchases.map((purchase,i) => (<PurchasesIndexItem key={i} purchase={purchase} />))}
             </div>)
         }
         
         return (
-            <div>
-                <div>
-                    <NavLink to="/purchases/new">Create New</NavLink>
+            <div className="purchases-index">
+                <div className="total-amt-text">
+                    <div>Your total Amortized Cost for all your purchases is</div>
+                    <div className="total-number">
+                        {Math.round(this.state.total_value*100) / 100}
+                    </div>
                 </div>
-                {to_return}
+
+                <div className="purchases-index-stuff">
+                    <div className="your-purchases-text">Your Purchases</div>
+                    <div className="create-new-btn-container">
+                        <Link to="/purchases/new" className="create-new-btn">+</Link>
+                    </div>
+                    {to_return}
+                </div>
+                
             </div>
         );
     }

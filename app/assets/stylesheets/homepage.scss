@@ -2,4 +2,45 @@
     background: red;
     height: 100vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-top {
+    width: 100%;
+    background: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.justify-logo {
+    background: image-url("justifylogofull.png");
+    height: 100px;
+    width: 200px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.logout-button {
+    background: rgb(90,177,187);
+    color: white;
+    // width: 70px;
+    // height: 20px;
+    padding: 10px 30px;
+    margin: 20px 20px 20px 0;
+    border-radius: 20px;
+    align-content: center;
+
+}
+
+.user-container {
+    background: orange;
+
+}
+
+.username-text {
+    font-size: 36px;
+    margin-left: 20px;
 }

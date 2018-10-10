@@ -7,10 +7,17 @@ class HomePage extends React.Component {
     render() {
         return (
             <div className="homepage-full">
-                <LogoutContainer />
-                <UserContainer />
-                You are logged in!
-                <PurchasesIndexContainer />
+                <div className="title-top">
+                    <div></div>
+                    <div className="justify-logo"></div>
+                    <div><LogoutContainer /></div>
+                </div>
+                <div className="user-container">
+                    <UserContainer />
+                </div>
+                <div className="purchases-index-container">
+                    <PurchasesIndexContainer />
+                </div>
             </div>
         );
     }

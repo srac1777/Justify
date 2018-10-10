@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+     font-family: 'SF-light';
+     letter-spacing: 0.05px;
+ }

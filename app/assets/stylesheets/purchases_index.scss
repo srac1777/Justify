@@ -1,0 +1,57 @@
+.purchases-index-container {
+    background: blueviolet;
+    height: 100%;
+    overflow: scroll;
+}
+
+.purchases-index {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+}
+
+.create-new-btn-container {
+    background: yellow;
+    
+}
+
+.create-new-btn {
+    border-radius: 50%;
+    font-size: 38px;
+    color: white;
+    background: #e94f37;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    // padding: 0 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 40px;
+
+}
+
+.total-amt-text {
+    margin: 30px 0;
+    background: white;
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.total-number {
+    font-size: 52px;
+    background: blue;
+}
+
+.purchases-index-stuff {
+    background: palevioletred;
+    width: 100%;
+}
+
+.your-purchases-text {
+    font-size: 32px;
+}
