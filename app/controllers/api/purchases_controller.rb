@@ -1,3 +1,5 @@
+require 'date'
+
 class Api::PurchasesController < ApplicationController
     def create
        @purchase = Purchase.new(purchases_params)
@@ -22,10 +24,21 @@ class Api::PurchasesController < ApplicationController
 
     def index
         @purchases = current_user.purchases
+        @total_value = 0
+        @purchases.each do |purchase|
+            @total_value += calculate_value(purchase)
+        end
+
+    end
+
+    def calculate_value(purchase)
+        (purchase.cost*1.0)/(Date.today - purchase.purchase_date + 1)
     end
 
     def show
         @purchase = current_user.purchases.find(params[:id])
+        # debugger
+        @value = calculate_value(@purchase)
     end
 
     def destroy
