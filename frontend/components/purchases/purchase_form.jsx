@@ -15,6 +15,7 @@ class PurchaseForm extends React.Component {
     }
 
     handleDate(e) {
+        
         this.setState({ purchase_date: e.target.value });
     }
 
