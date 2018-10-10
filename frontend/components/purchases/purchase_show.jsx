@@ -27,8 +27,12 @@ class PurchaseShow extends React.Component {
                 {this.props.purchase.name}
                 {this.props.purchase.cost}
                 {this.props.purchase.description}
+                {this.props.purchase.purchase_date}
                 <button onClick={this.handleDelete.bind(this)}>Delete purchase</button>
                 <Link to='/home'>Home</Link>
+                <Link to={`/purchases/${this.props.match.params.purchaseId}/edit`}>Edit</Link>
+                
+
             </div>
         );
     }

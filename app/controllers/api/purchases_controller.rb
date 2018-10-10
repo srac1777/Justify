@@ -21,15 +21,15 @@ class Api::PurchasesController < ApplicationController
     end
 
     def index
-        @purchases = Purchase.all.where(["user_id = ?", current_user.id])
+        @purchases = current_user.purchases
     end
 
     def show
-        @purchase = Purchase.find(params[:id])
+        @purchase = current_user.purchases.find(params[:id])
     end
 
     def destroy
-        @purchase = Purchase.find(params[:id])
+        @purchase = Purchase.find(params[:id]).where(["user_id = ?", current_user.id])
         @purchase.destroy
         render :show
     end

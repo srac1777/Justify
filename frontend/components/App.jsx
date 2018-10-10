@@ -8,6 +8,8 @@ import LandingPage from './landing_page/landing_page';
 import HomePage from './home_page/home';
 import PurchaseShowPage from '../components/purchases/purchases_show_container';
 import NewPurchasePage from '../components/purchases/purchases_form_container';
+import PurchaseEditPage from '../components/purchases/purchases_edit_container';
+
 
 
 
@@ -22,6 +24,7 @@ const App = ({store}) => {
                         <ProtectedRoute path="/home" component={HomePage} />
                         <ProtectedRoute exact path="/purchases/new" component={NewPurchasePage} />
                         <ProtectedRoute exact path="/purchases/:purchaseId" component={PurchaseShowPage} />
+                        <ProtectedRoute exact path="/purchases/:purchaseId/edit" component={PurchaseEditPage} />
                         
                         <AuthRoute path="/" component={LandingPage} />
                     </Switch>
