@@ -44,7 +44,7 @@ class PurchaseForm extends React.Component {
                 })
         }
         
-        this.setState({ name: '', description: '', purchase_date: '', cost: ''}) //category
+        this.setState({ name: '', purchase_date: '', cost: ''}) //category
     }
 
     render() {
