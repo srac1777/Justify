@@ -17,7 +17,7 @@ class PurchasesIndexItem extends React.Component {
                 <Link to={`/purchases/${this.props.purchase.id}`}>
                     <div className="each-purchase-box">
                         <div className="purchase-name-top-index-item">{this.props.purchase.name}</div>
-                        <div>Current Cost: {s}</div>
+                        <div>Current Cost: ${s}</div>
                     </div>
                 </Link>
             </div>
