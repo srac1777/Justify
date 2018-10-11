@@ -3,12 +3,18 @@ import { Link } from 'react-router-dom';
 
 class LandingPage extends React.Component {
     render(){
-        return (<div>
-                <Link to="/signup" className="link1">SIGN UP</Link>
-                <p>- ALREADY HAVE AN ACCOUNT? -</p>
-                <Link to="/login" className="link2">LOG IN</Link>
-        </div>
-                
+        return (
+            
+            <div className="landing-full">
+                    <div className="landing-title"></div>
+                    <div className="landing-links">
+                        <div className="link1"><Link to="/signup" className="ps-back-btn">SIGN UP</Link></div>
+                        <div className="already">- ALREADY HAVE AN ACCOUNT? -</div>
+                        <div className="link1"><Link to="/login" className="ps-back-btn">LOG IN</Link></div>
+                    </div>
+                    
+                </div>
+            
         )
     }
 }

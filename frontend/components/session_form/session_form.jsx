@@ -65,11 +65,11 @@ class SessionForm extends React.Component {
         let loginorsignup;
         let err;
         if(this.props.formType === 'LOG IN'){
-            demo = (<span><button className="demo-login-fb" onClick={this.handleDemo.bind(this)}>DEMO LOGIN</button>
+            demo = (<span><button className="demo-login" onClick={this.handleDemo.bind(this)}>DEMO LOGIN</button>
             <p className="or">- OR -</p></span>)
             loginorsignup = (<div>Don't have an account? <Link to="/signup" className="ss">Sign Up</Link></div>)
         } else {
-            demo = (<span><button className="demo-login-fb" onClick={this.handleDemo.bind(this)}>DEMO LOGIN</button>
+            demo = (<span><button className="demo-login" onClick={this.handleDemo.bind(this)}>DEMO LOGIN</button>
                 <p className="or">- OR -</p></span>)
             loginorsignup = (<div>Already have an account? <Link to="/login" className="ss">Log in</Link></div>)
             
@@ -77,25 +77,25 @@ class SessionForm extends React.Component {
 
         return (
             <div className="AllSession">
-                <div className="sessionlogo-container">
-                    <div className="sessionlogo"></div>
-                </div>
+                
                 <div className="allform">
                     {demo}
                 <form>
                     <div>
                             <input type="text" 
+                                className="new-form-input"
                                 value={this.state.username}
                                 onChange={this.handleUsernameChange}
-                                className="usernameform"
+                                
                                 placeholder="Username"
                                 autoFocus
                                 />
                         <br />
                             <input type="password"
+                                className="new-form-input"
                                 value={this.state.password}
                                 onChange={this.handlePasswordChange}
-                                className="passwordform"
+                                
                                 placeholder="Password"
                                 />
                         <br />

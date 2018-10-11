@@ -1,0 +1,35 @@
+.landing-full{
+    background: white;
+
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-title {
+    background: image-url("justifylogofull.png");
+    height: 70px;
+    width: 140px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 30px;
+    margin-top: -100px;
+}
+
+
+.landing-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link1 {
+    margin: 15px;
+}
+
+.already {
+    font-size: 12px;
+}
