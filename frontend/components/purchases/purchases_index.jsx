@@ -35,7 +35,7 @@ class PurchasesIndex extends React.Component {
         return (
             <div className="purchases-index">
                 <div className="total-amt-text">
-                    <div>Your total Amortized Cost for all your purchases is:</div>
+                    <div>Your Total Amortized Cost for all your purchases is:</div>
                     <div className="total-number">
                         $ {Math.round(this.state.total_value*100) / 100}
                     </div>

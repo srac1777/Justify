@@ -1,0 +1,82 @@
+.title-top-2 {
+    margin-top: 5px;
+    width: 100%;
+    // background: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.purchase-title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.purchase-show-main {
+    display: flex;
+    flex-direction: row;
+    // background: red;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.purchase-show-right{
+    margin-right: 130px;
+    margin-left: 100px;
+}
+
+.purchase-show-left{
+    margin-right: 130px;
+
+    margin-left: 100px;
+}
+
+.ps-back-container{
+    margin-top: 20px;
+}
+
+.ps-back-btn{
+    font-size: 14px;
+    background: rgb(90,177,187);
+    padding: 4px 0;
+    width: 70px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 20px;
+    color: white;
+}
+
+.ps-delete-btn{
+    font-size: 14px;
+    background: #CC2E2E;
+    padding: 4px 0;
+    width: 70px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.ps-edit-btn{
+    font-size: 14px;
+    background: #47C16E;
+    padding: 4px 0;
+    width: 70px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 20px;
+    color: white;
+}
+
+
+
+.ps-cpd-container{
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.ps-value {
+    color: #47C16E;
+}
